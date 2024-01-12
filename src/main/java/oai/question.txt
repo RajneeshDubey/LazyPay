@@ -1,0 +1,52 @@
+LazyPay
+
+Features:
+ 1. Credit Service : credits to user
+ 2. time to pay back : 30 days
+ 3. Payment : goes to app and pay, auto-pay from bank
+
+
+ 2. Loan : 1st or 2nd of month . loan payback
+
+
+=======
+
+* CreditManagement :
+* Loan Management : Loan
+* Billing Management : Calculations or settlement; Invoice
+* Notification Service
+* User Management : AccountId , bank details
+* Transaction Management : Process payments or deductions
+* Interest Calculator Management
+
+
+
+Transaction Process -> User Management
+Credit Management -> Transaction Processing
+Loan Management -> Transaction Processing
+Billing -> Credit and loan management
+Payments -> Facilitate the bank/upi payments
+Notification : trigger (jobs) : due date from Loan, Credit |  Transaction -> sync
+Interest Calculator -> UserManager (credit scores, profile) |  LoanManagement, CreditManagement
+
+
+SecurityManager (API Gateway)  : Authentication, Authorization
+
+
+
+=============
+DB Schema :
+   User (:account)
+   Credit (:userId)
+   Loan (:userId)
+   Transaction (:loanId OR :creditId)  : NoSQL
+   Billing (:loanId, creditId)
+
+
+
+
+
+
+
+
+
